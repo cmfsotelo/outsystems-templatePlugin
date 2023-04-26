@@ -7,7 +7,7 @@ const { execSync } = require("child_process");
 const ExtendedConfigParser = require('./utils/extendedConfigParser');
 
 
-const PREFERENCE_NAME_SUFFIX = 'trapeze-conf'
+const PREFERENCE_NAME_SUFFIX = 'TrapezeConf'
 
 module.exports = function (context) {
     // Get the Cordova project directory
@@ -25,16 +25,15 @@ module.exports = function (context) {
 
     // Look for a trapeze-platform.yaml file in the root of the platform directory
     const yamlPath = path.join(projectRoot, 'platforms', platform, 'trapeze-conf.yaml');
-
+debugger;
     if (preferenceValue) {
         try {
             // Decode the base64-encoded value
             const decodedValue = Buffer.from(preferenceValue, 'base64').toString('utf-8');
             yamlContents = decodedValue.trim();
-            yamlContents = fs.writeFileSync(yamlPath, 'utf-8').trim();
+            fs.writeFileSync(yamlPath, yamlContents);
         } catch (e) {
-            logger.error(`Invalid base64-encoded value for preference ${preferenceName}`);
-            logger.error(e);
+            logger.error(`Invalid base64-encoded value for preference ${PREFERENCE_NAME_SUFFIX}`,e);
             return;
         }
     }
