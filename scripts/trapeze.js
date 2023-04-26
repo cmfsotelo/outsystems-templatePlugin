@@ -10,7 +10,6 @@ const ExtendedConfigParser = require('./utils/extendedConfigParser');
 const PREFERENCE_NAME_SUFFIX = 'trapeze-conf'
 
 module.exports = function (context) {
-    debugger
     // Get the Cordova project directory
     const projectRoot = context.opts.projectRoot;
     // Get the platform (android or ios)
