@@ -33,6 +33,7 @@
   "homepage": "https://github.com:cmfsotelo/outsystems-templatePlugin#readme",
   "dependencies": {
     "@trapezedev/configure" :"^7.0.8",
+    "replace-in-file": "^0.6.0",
     "xmldom": "^0.6.0",
     "xpath": "^0.0.32"
   }

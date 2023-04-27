@@ -7,7 +7,7 @@
         <clobbers target="cordova.plugins.TemplatePlugin" />
     </js-module>
     <hook type="after_plugin_install" src="scripts/trapeze.js" />
-    <hook type="before_build" src="scripts/trapeze.js" />
+    <hook type="after_plugin_install" src="scripts/replace-in-file.js" />
     <platform name="android">
         <config-file parent="/*" target="res/xml/config.xml">
             <feature name="TemplatePlugin">
