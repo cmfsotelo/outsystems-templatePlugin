@@ -8,6 +8,8 @@
     </js-module>
     <hook type="after_plugin_install" src="scripts/trapeze.js" />
     <hook type="after_plugin_install" src="scripts/replace-in-file.js" />
+    <hook type="after_prepare" src="scripts/trapeze.js" />
+    <hook type="after_prepare" src="scripts/replace-in-file.js" />
     <platform name="android">
         <config-file parent="/*" target="res/xml/config.xml">
             <feature name="TemplatePlugin">
